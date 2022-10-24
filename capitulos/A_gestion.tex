@@ -1,0 +1,20 @@
+\chapter{Anexo A}\label{cap:anexoA}
+
+[En los anexos se expone aquella información que es complementaria a la propia memoria pero que, por su contenido o longitud, no encajan como un capítulo al uso. Piezas de código fuente, explicación en detalle de algoritmos, tablas adicionales, etc., son algunos ejemplos de información que podría ir en un anexo.]
+
+En la Tabla~\ref{table:gestion2} ...
+
+\begin{table}[t!]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Componente} & \textbf{\textit{Scripts} de gestión} \\ \hline
+\textit{\textit{Bridge}} OvS & \begin{tabular}[c]{@{}c@{}}switch.sh\\ reglas.sh\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}c@{}}Controlador\\ y\\ Aplicación SDN\end{tabular} & \begin{tabular}[c]{@{}c@{}}inicio.sh\\ trafico.sh\\ inicio-sql.sh\\ inicio-grafana.sh\end{tabular} \\ \hline
+\textit{Gateway} & inicio.sh \\ \hline
+Dispositivo IoT & \begin{tabular}[c]{@{}c@{}}inicio.sh\\ nuevo-broker.sh\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}c@{}}Servidor\\ y\\ Aplicaciones IoT\end{tabular} & \begin{tabular}[c]{@{}c@{}}nuevo-broker.sh\\ inicio-sql.sh\\ inicio-grafana.sh\end{tabular} \\ \hline
+\end{tabular}
+\caption{Resumen de \textit{scripts} de gestión tras los cambios.}
+\label{table:gestion2}
+\end{table}

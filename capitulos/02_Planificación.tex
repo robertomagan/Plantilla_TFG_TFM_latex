@@ -1,0 +1,140 @@
+\chapter{Planificación}\label{cap:planif}
+
+\section{Requisitos}
+[Sobre todo en proyectos de diseño software/hardware]
+
+\section{Tareas}
+[A partir de los objetivos planteados del proyecto se definirán tareas así como su duración. Un objetivo, puede dar lugar a más de una tarea para su consecución. Es importante relacionar cada tarea con sus objetivos asociados.]
+
+\begin{itemize}
+    \item \textbf{Estudio del estado del arte.} ...
+    \item \textbf{Evaluación de la propuesta} 
+\end{itemize}
+
+\section{Recursos humanos y técnicos}
+
+Los recursos necesitamos para llevar a cabo el proyecto son:
+
+\begin{itemize}
+    \item \textbf{Hardware}:
+    
+    \begin{itemize}
+        \item Ordenador de sobremesa HP Z2 SFF G4 Workstation del Laboratorio de Ciberseguridad de la UGR.
+        
+        \item 2 Raspberries Pi, modelos 4 y 5.
+        
+        \item Ordenador portátil HP Laptop 15s-eq1xxx.
+    \end{itemize}
+        
+    \item \textbf{Software}:
+        
+    \begin{itemize}
+        \item Sistema operativo Ubuntu 18.04 LTS. Será la distribución Linux principal con la que vamos a trabajar, tanto en forma nativa como en máquinas virtuales.
+        
+        \item Sistema operativo Raspberry Pi OS Raspbian. Será la distribución Linux con la que vamos a trabajar en las Raspberries Pi.
+        
+        \item VirtualBox. Con él crearemos máquinas virtuales.
+        
+        \item \ac{OvS}. Permitirá implementar un switch OpenFlow utilizado en nuestra arquitectura de red.
+        
+        \item RYU Controller. Es el software elegido para el controlador SDN. Aporta aplicaciones SDN de ejemplo con las que vamos a trabajar.
+        
+        \item MySQL. Permite usar bases de datos SQL.
+        
+        \item Grafana. Permite crear representaciones gráficas de datos almacenados en bases de datos de cualquier tipo. Lo utilizaremos junto a MySQL.
+        
+        \item Mosquitto y Mosquitto-clients. Con mosquitto podremos implementar un \textit{broker} MQTT, y con mosquitto-clients podemos publicar y suscribirnos a diferentes tópicos usando MQTT.
+        
+    \end{itemize}
+    
+    \item \textbf{Recursos humanos}. En la Tabla~\ref{table:recursos-humanos} se muestra una aproximación de las horas de trabajo empleadas en las diferentes tareas realizadas, tanto por el desarrollador como por el supervisor, incluyendo las reuniones asociadas a cada tarea.
+\end{itemize}
+
+\section{Temporización}
+
+Para alcanzar los objetivos de cualquier proyecto, es necesario llevar a cabo una planificación temporal de las diferentes tareas a realizar.\\
+
+En nuestro caso, no hemos dispuesto de todos los recursos desde el primer momento, por lo que hemos ido adaptando las tareas conforme a lo que podíamos llevar a cabo. La duración de cada tarea depende de varias aspectos como su complejidad y disposición de recursos.\\
+
+Las diferentes tareas que hemos llevado a cabo las mostramos en el diagrama de Gantt donde hemos realizado una planificación por semanas (ver Figura~\ref{fig:gantt}).\\
+
+Para controlar que estas tareas se cumplen en los plazos establecidos, se han llevado a cabo diferentes reuniones con el tutor en las cuales se exponía el trabajo realizado y se determinaban las siguientes tareas a llevar a cabo.\\
+
+\begin{table}[t!]
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Tarea} & \textbf{\begin{tabular}[c]{@{}c@{}}Tiempo empleado \\ por el \\ desarrollador (horas)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Tiempo empleado \\ por el \\ tutor (horas)\end{tabular}} \\ \hline
+Estado del arte & 25 & 5 \\ \hline
+Análisis de las soluciones & 30 & 7 \\ \hline
+Diseño e implementación & 60 & 6 \\ \hline
+Evaluación de seguridad & 20 & 5 \\ \hline
+Securización del sistema & 15 & 2 \\ \hline
+\textbf{Total} & \textbf{150} & \textbf{25} \\ \hline
+\end{tabular}
+\caption{Resumen recursos humanos.}
+\label{table:recursos-humanos}
+\end{table}
+
+\begin{figure}[t!]
+    \centering
+    \includegraphics[width=1\textwidth]{imagenes/cap2/gannt.pdf}
+    \caption{Diagrama de Gantt del proyecto.}
+    \label{fig:gantt}
+\end{figure}
+
+\section{Presupuesto}
+
+Para dar un valor económico a este proyecto, tendremos en cuenta los recursos necesarios y el tiempo empleado en el desarrollo de las tareas. Para hacer una aproximación del tiempo empleado, podemos basarnos en el diagrama de Gantt de la Figura~\ref{fig:gantt}.\\
+
+En cuanto a los recursos humanos, el coste del desarrollador será de 25 euros por hora. El proyecto ha estado supervisado por un tutor. Con el tutor se han concertado reuniones cada dos semanas durante los primeros 2 meses y cada semana durante el resto, de una duración media de 30 minutos. El coste de la supervisión es de 70 euros por hora. En la Tabla~\ref{table:recursos-humanos} se pueden ver las horas de trabajo empleadas en cada tarea, por lo que nos basamos en él para determinar el coste total en recursos humanos, que podemos ver en la Tabla~\ref{table:coste-recursos-humanos} y que asciende a 5.500\euro.\\
+
+Por otra parte, debemos considerar el coste de los recursos tecnológicos empleados (ver Tabla~\ref{table:recursos-hardware}). Para calcular el coste, hemos hecho una estimación del tiempo de vida de cada uno. Suponemos que el puesto de trabajo del Laboratorio de Ciberseguridad de la UGR tiene un tiempo de vida de 10 años, y un precio de 1600\euro, por lo que nos conlleva un gasto de 160\euro. Por otra parte, suponemos que nuestro ordenador portátil tiene un tiempo de vida de 5 años, y un precio de 500\euro, por lo que nos conlleva un gasto de 100\euro. Por último, suponemos que las dos Raspberries tienen un coste aproximado por unidad de 65\euro. El coste total de los recursos tecnológicos necesarios para el desarrollo del trabajo es de 390\euro.\\
+
+En cuanto al software, contamos con software de código abierto. Por tanto, el coste total del software necesario para el trabajo es de 0\euro.\\
+
+Como se ve en la Tabla~\ref{table:presupuesto-total}, el coste total del proyecto asciende a 5890\euro.\\
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Tarea} & \textbf{\begin{tabular}[c]{@{}c@{}}Coste del\\ desarrollador \\ (25\euro/h)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Coste del \\ tutor \\ (70\euro/h)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Coste total\\ (\euro)\end{tabular}} \\ \hline
+Estado del arte & 625 & 350 & 975 \\ \hline
+Análisis de las soluciones & 750 & 490 & 1.240 \\ \hline
+Diseño e implementación & 1.500 & 420 & 1.920 \\ \hline
+Evaluación de seguridad & 500 & 350 & 850 \\ \hline
+Securización del sistema & 375 & 140 & 515\\ \hline
+\textbf{Total} &  &  & \textbf{5.500} \\ \hline
+\end{tabular}
+\caption{Coste de recuros humanos.}
+\label{table:coste-recursos-humanos}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Recurso} & \textbf{Coste (\euro)} \\ \hline
+\begin{tabular}[c]{@{}c@{}}Estación de trabajo del Laboratorio de\\ Ciberseguridad de la UGR\end{tabular} & 160 \\ \hline
+2 Raspberries Pi & 130 \\ \hline
+Ordenador portátil HP Laptop 15s-eq1xxx & 100 \\ \hline
+\textbf{Total} & \textbf{390} \\ \hline
+\end{tabular}
+\caption{Coste de los recursos Hardware.}
+\label{table:recursos-hardware}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\begin{tabular}[c]{@{}c@{}}Coste Recursos humanos (\euro)\end{tabular}  &  5.500   \\ \hline
+\begin{tabular}[c]{@{}c@{}}Coste Recursos hardware (\euro)\end{tabular} & 390\\ \hline
+\begin{tabular}[c]{@{}c@{}}Coste Recursos software (\euro)\end{tabular} &  0  \\ \hline
+\textbf{Total (\euro)}                                                      &   \textbf{5890}  \\ \hline
+\end{tabular}
+\caption{Presupuesto total estimado.}
+\label{table:presupuesto-total}
+\end{table}

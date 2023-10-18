@@ -1,3 +1,20 @@
 \chapter{Diseño, implementación de la propuesta}\label{cap:dise-imp}
 
 [Exponer aquí los requisitos, diseño y la implementación de la propuesta realizada. Este capítulo podría integrarse el de la propuesta~\ref{cap:propuesta} si es necesario.]
+
+Ejemplo de código en \LaTeX
+
+\begin{minted}
+[
+frame=lines, tabsize=4,
+framesep=2mm,
+baselinestretch=1.2,
+bgcolor=LightGray,
+fontsize=\footnotesize,
+linenos
+]{python}
+# Create a Websocket
+if remote_addresses:
+    ws_address = sensor_config_params.get_config()['Sensor']['ws_address']
+    websocket = Websocket(ws_address['ip'], ws_address['port'])
+\end{minted}

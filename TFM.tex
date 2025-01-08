@@ -2,7 +2,7 @@
 %\documentclass[a4paper,twoside,11pt,titlepage]{book}
 \usepackage{listings}
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\usepackage[spanish,es-tabla]{babel}
 
 % \usepackage[style=list, number=none]{glossary} %
 %\usepackage{titlesec}
@@ -44,6 +44,9 @@
 \usepackage{longtable}
 
 \usepackage[pdfborder={000}]{hyperref} %referencia
+
+%Minitoc
+\usepackage{minitoc}
 
 % ********************************************************************
 % Re-usable information
@@ -139,8 +142,8 @@ pdfproducer = {pdflatex}
    }
 
 % minimizar fragmentado de listados
-\lstnewenvironment{listing}[1][]
-   {\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
+%\lstnewenvironment{listing}[1][]
+%   {\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
 
 \lstdefinestyle{CodigoC}
    {
@@ -196,18 +199,24 @@ pdfproducer = {pdflatex}
 %\usepackage{minitoc}
 
 \begin{document}
+\dominitoc
 \input{portada/portada}
 \input{prefacios/prefacio}
-%\frontmatter
-\tableofcontents
-\listoffigures \mtcaddchapter
+% Con este comando hacemos que los números de las páginas aparezcan en romano y que los capítulos no se enumeren, pese a esto, el título de cada capítulo aparecerá en el índice
+\frontmatter
 
-%lista de tablas
-\renewcommand\listtablename{Índice de tablas} \mtcaddchapter
+% Con esto creamos el índice
+\tableofcontents
+
+% Con esto creamos de forma automática una lista de las figuras y de las tablas
+\listoffigures 
 \listoftables
-%
-%\mainmatter
-%\setlength{\parskip}{5pt}
+
+% Con mainmatter reseteamos los cambios de frontmatter y se resetea la cuenta de los números de página
+\mainmatter
+
+% Con esto hacemos que los párrafos aparezcan separados
+\setlength{\parskip}{5pt}
 
 \chapter*{Acrónimos}\addcontentsline{toc}{chapter}{Acrónimos}
 \input{acro_list}
